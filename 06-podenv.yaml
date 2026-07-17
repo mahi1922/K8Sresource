@@ -14,4 +14,4 @@ spec:
         name: project
         value: "roboshop"
         name: environment
-        value: dev
+        value: "dev"
