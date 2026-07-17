@@ -13,7 +13,7 @@ spec:
   containers:
     - name: almalinux
       image: almalinux
-      resource:
+      resources:
         requests:
           cpu: "100m" 
           memory: "128mi"
