@@ -11,7 +11,10 @@ spec:
     - name: nginx
       image: nginx
       env:
-        - name: project
-          value: "roboshop"
-        - name: environment
-          value: "dev"
+        - name: component
+          value: "app"
+    - name: redis
+      image: redis
+      env:
+       - name: component
+         value: "db"
