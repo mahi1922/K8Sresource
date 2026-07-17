@@ -12,5 +12,5 @@ spec:
   containers:
     - name: redis
       image: redis  
-    - name: apache
-      image: apache/spark
+    - name: bash
+      image: bash
