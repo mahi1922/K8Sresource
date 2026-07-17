@@ -20,3 +20,4 @@ spec:
         limits:
           cpu: "150m"
           memory: "256Mi"
+      command: ["sleep", "1000s"]
