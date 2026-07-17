@@ -13,4 +13,4 @@ spec:
     - name: redis
       image: redis  
     - name: apache
-      image: apache
+      image: apache/spark
