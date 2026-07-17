@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: podenv
+  namespace: roboshop
+  labels: 
+    project: roboshop
+    environment: dev
+spec:
+  containers:
+    - name: nginx
+      image: nginx
+      env:
+        name: project
+        value: "roboshop"
+        name: environment
+        value: dev
