@@ -10,6 +10,3 @@ spec:
   containers:
     - name: nginx
       image: nginx
-      env:
-        project: roboshop
-        environment: dev
