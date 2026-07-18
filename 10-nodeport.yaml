@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: nodePort
+metadata:
+  name: nodeportfornginx
+spec:
+   type: NodePort
+   selector:
+     #project: roboshop
+     #tier: frontend
+     app.kubernetes.io/component: frontend
+   ports:
+    - protocol: TCP
+      port: 8080
+      targetPort: 80
+      NodePort: 30007
