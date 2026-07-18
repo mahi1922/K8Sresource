@@ -1,0 +1,23 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: poddata
+data:
+  project: roboshop
+  envoionment: dev
+  password: DevOps321
+
+#########
+
+apiVersion: v1
+kind: poddata
+metadata: 
+  name: podconigmap
+spec:
+  containers:
+    - name: nginx
+      image: nginx 
+      envFrom:
+        configMapRef:
+          name: ConfigMap
+  
