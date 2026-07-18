@@ -3,7 +3,7 @@ kind: Service
 metadata:
   name: podip
   labels:               #service labels
-    name: cluster Ip
+    name: nginx
     purpose: demo
  # Service uses the below labels to select the pods
 spec:
