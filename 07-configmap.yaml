@@ -7,10 +7,10 @@ data:
   envoionment: dev
   password: DevOps321
 
-#########
+
 
 apiVersion: v1
-kind: poddata
+kind: Pod
 metadata: 
   name: podconigmap
 spec:
