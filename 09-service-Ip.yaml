@@ -1,0 +1,32 @@
+apiVersion: v1
+kind: service
+metadata:
+  name: podip
+  labels:               #service labels
+    name: cluster Ip
+    purpose: demo
+ # Service uses the below labels to select the pods
+spec:
+  selector:
+    project: roboshop
+    tier: frontend
+    component: frontend
+  ports:
+    - protocol: TCP
+      port: 8080 #serviceport
+      targetport: 80 #container port
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: clusterpod
+  labels:
+    project: roboshop
+    tier: frontend
+    component: frontend
+spec:
+  containers:
+    - name: nginx
+      image: nginx
+
+  
