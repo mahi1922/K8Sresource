@@ -17,5 +17,5 @@ spec:
     - name: nginx-pod
       image: nginx
       envFrom:
-        - SecretRef: 
+        - secretRef: 
             name: podsecret
