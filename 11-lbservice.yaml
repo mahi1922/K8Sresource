@@ -10,11 +10,11 @@ spec:
   type: LoadBalancer
   # Service uses the below labels to select the pods
   selector:
-    project: roboshop
-    tier: frontend
-    component: frontend
+    #project: roboshop
+     #tier: frontend
+     app.kubernetes.io/component: frontend
   ports:
     - protocol: TCP
       port: 80 # service port
       targetPort: 80 # container port
-      nodePort: 30008
+      nodePort: 30007
