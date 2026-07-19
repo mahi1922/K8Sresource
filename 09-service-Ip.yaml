@@ -28,6 +28,9 @@ spec:
   containers:
     - name: nginx
       image: nginx
+      ports:
+       - containerPort: 80
+
       #command: ["sleep", "1000s"]
 
   
