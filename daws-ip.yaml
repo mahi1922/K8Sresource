@@ -17,17 +17,17 @@ spec:
       port: 80 # service port
       targetPort: 80 # container port
 ---
-apiVersion: v1
-kind: Pod
-metadata:
+#apiVersion: v1
+#kind: Pod
+#metadata:
   name: nginx # pod name
   labels:
     project: roboshop
     environment: dev
     component: frontend
     tier: frontend
-spec:
-  containers:
-  - name: nginx # container name
-    image: nginx # by default it will get from docker hub
-    
+#spec:
+  #containers:
+  #- name: nginx # container name
+  #  image: nginx # by default it will get from docker hub
+    #
