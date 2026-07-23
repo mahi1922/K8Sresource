@@ -14,15 +14,16 @@ metadata:
        app.kubernetes.io/component: frontend
   #POD Defination  
     template:
-      name: nginx
-      labels:
-        project: roboshop
-        tier: frontend
-        app.kubernetes.io/component: frontend
-      spec:
+      metadata:
+       name: nginx
+       labels:
+         project: roboshop
+         tier: frontend
+         app.kubernetes.io/component: frontend
+       spec:
         name: nginx-container
         image: nginx
-      ports:
+       ports:
         - protocol: TCP
           targetPort: 8080
           Port: 80
