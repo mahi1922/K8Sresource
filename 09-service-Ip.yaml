@@ -16,15 +16,15 @@ spec:
       port: 80 #serviceport
       targetPort: 80 #container port
 ---
-apiVersion: v1
-kind: Pod
-metadata:
+#apiVersion: v1
+#kind: Pod
+#metadata:
   name: clusterpod
   labels:
     project: roboshop
     tier: frontend
     app.kubernetes.io/component: frontend
-spec:
+#spec:
   containers:
     - name: nginx
       image: nginx
