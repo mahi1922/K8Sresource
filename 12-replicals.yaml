@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: ReplicaSet
 metadata:
-  name: nginx-re
+  name: frontend
   labels:
     project: roboshop
     tier: frontend
@@ -15,7 +15,6 @@ spec:
   #POD Defination  
   template:
     metadata:
-     name: nginx
      labels:
       project: roboshop
       tier: frontend
