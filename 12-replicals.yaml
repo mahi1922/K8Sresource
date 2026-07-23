@@ -8,9 +8,9 @@ metadata:
 spec:
   replicas: 3
   selector:
-   matchLabels:
+   #matchLabels:
      #project: roboshop
-     tier: frontend
+     #tier: frontend
      app.kubernetes.io/component: frontend
   #POD Defination  
   template:
