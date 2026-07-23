@@ -5,7 +5,6 @@ metadata:
 spec:
    type: NodePort
    selector:
-    matchLabels:
      project: roboshop
      tier: frontend
      app.kubernetes.io/component: frontend

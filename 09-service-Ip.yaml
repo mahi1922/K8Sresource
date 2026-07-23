@@ -8,7 +8,6 @@ metadata:
  # Service uses the below labels to select the pods
 spec:
   selector:
-    matchLabels:
       project: roboshop
       tier: frontend
       app.kubernetes.io/component: frontend
