@@ -11,7 +11,7 @@ spec:
    #matchLabels:
      #project: roboshop
      #tier: frontend
-     app.kubernetes.io/component: frontend
+   app.kubernetes.io/component: frontend
   #POD Defination  
   template:
     metadata:
