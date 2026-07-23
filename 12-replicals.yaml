@@ -1,27 +1,28 @@
-apiVersion: apps/v1
-kind: ReplicaSet
+apiVersion: v1
+kind: Replicaset
 metadata:
-  name: nginx-replica
+  name: nginx-re
   labels:
     project: roboshop
-    environment: dev
-    purpose: demo
-spec:
-  ### No of replicas
-  replicas: 5
-  selector:
-    matchLabels:
-      project: roboshop
-      tier: frontend
-      app.kubernetes.io/component: frontend
-  #pod defination
-  template:
-    metadata:
+    tier: frontend
+  spec:
+    replicas: 3
+    selector:
+     matchLabels:
+       project: roboshop
+       tier: frontend
+       app.kubernetes.io/component: frontend
+  #POD Defination  
+    template:
+      name: nginx
+      image: nginx
       labels:
         project: roboshop
         tier: frontend
         app.kubernetes.io/component: frontend
-      spec:
-        containers:
-      - name: nginx-rs
-        image: nginx
+      ports:
+        - protocol: TCP
+          targetPort: 8080
+          Port: 80
+          NodePort: 30008
+       
