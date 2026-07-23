@@ -5,27 +5,27 @@ metadata:
   labels:
     project: roboshop
     tier: frontend
-  spec:
-    replicas: 3
-    selector:
-     matchLabels:
-       project: roboshop
-       tier: frontend
-       app.kubernetes.io/component: frontend
+spec:
+  replicas: 3
+  selector:
+   matchLabels:
+     project: roboshop
+     tier: frontend
+     app.kubernetes.io/component: frontend
   #POD Defination  
-    template:
-      metadata:
-       name: nginx
-       labels:
-         project: roboshop
-         tier: frontend
-         app.kubernetes.io/component: frontend
-       spec:
-        name: nginx-container
-        image: nginx
-       ports:
-        - protocol: TCP
-          targetPort: 8080
-          Port: 80
-          NodePort: 30008
+  template:
+    metadata:
+     name: nginx
+     labels:
+      project: roboshop
+      tier: frontend
+      app.kubernetes.io/component: frontend
+     spec:
+      name: nginx-container
+      image: nginx
+  ports:
+      - protocol: TCP
+        port: 8089
+        targetPort: 80
+        nodePort: 30008
        
