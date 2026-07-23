@@ -16,23 +16,3 @@ spec:
     - protocol: TCP
       port: 80 #serviceport
       targetPort: 80 #container port
-
----
-apiVersion: v1
-kind: Pod
-metadata:
-  name: clusterpod
-  labels:
-    project: roboshop
-    tier: frontend
-    app.kubernetes.io/component: frontend
-spec:
-  containers:
-    - name: nginx
-      image: nginx
-      ports:
-       - containerPort: 80
-
-      #command: ["sleep", "1000s"]
-
-  
