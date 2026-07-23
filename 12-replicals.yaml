@@ -9,7 +9,7 @@ spec:
   replicas: 3
   selector:
    matchLabels:
-     project: roboshop
+     #project: roboshop
      tier: frontend
      app.kubernetes.io/component: frontend
   #POD Defination  
