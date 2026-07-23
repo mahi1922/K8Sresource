@@ -23,9 +23,9 @@ spec:
      spec:
       name: nginx-container
       image: nginx
-  ports:
-      - protocol: TCP
-        port: 8089
-        targetPort: 80
-        nodePort: 30008
+  #ports:
+  #    - protocol: TCP
+   #     port: 8089
+   #     targetPort: 80
+   #     nodePort: 30008
        
