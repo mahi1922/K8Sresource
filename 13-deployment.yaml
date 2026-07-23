@@ -4,14 +4,14 @@ metadata:
   name: frontend
   labels:
     component: frontend
-  spec:
-     replicas: 3
-     labels:
-       matchLabels:
+spec:
+    replicas: 3
+    labels:
+     matchLabels:
          project: roboshop
          tier: frontend
          app.kubernetes.io/component: frontend
-     template:
+    template:
       metadata:
         labels:
           project: roboshop
