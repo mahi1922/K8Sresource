@@ -19,7 +19,7 @@ spec:
       project: roboshop
       tier: frontend
       app.kubernetes.io/component: frontend
-     spec:
+    spec:
       containers:
        name: nginx-container
        image: nginx
