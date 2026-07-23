@@ -8,9 +8,10 @@ metadata:
  # Service uses the below labels to select the pods
 spec:
   selector:
-    #project: roboshop
-    #tier: frontend
-    app.kubernetes.io/component: frontend
+    matchLabels:
+      project: roboshop
+      tier: frontend
+      app.kubernetes.io/component: frontend
   ports:
     - protocol: TCP
       port: 80 #serviceport
