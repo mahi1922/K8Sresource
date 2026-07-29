@@ -1,0 +1,17 @@
+# Simplified ApisixRoute CRD
+apiVersion: apisix.apache.org/v2
+kind: ApisixRoute
+metadata:
+  name: jupyterhub-apisix-route
+  namespace: jupyterhub
+spec:
+  http:
+    - name: jupyterhub
+      match:
+        hosts:
+          - tdicamnwipvcm02.private.cloud.teradata.com
+        paths:
+          - /one-td/jupyter/*
+      backends:
+        - serviceName: jupyterhub
+          servicePort: 8000
