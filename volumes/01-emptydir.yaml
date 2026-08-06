@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: nginx-emptyDir
+  name: nginxemptyDir
   labels:
     project: roboshop
     component: dev
