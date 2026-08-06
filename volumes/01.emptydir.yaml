@@ -1,11 +1,11 @@
 apiVersion: v1
-kind: pod
+kind: Pod
 metadata:
   name: nginx-emptyDir
-  Labels:
+  labels:
     project: roboshop
     component: dev
-specifications:
+spec:
   containers:
     - name: nginx
       image: nginx

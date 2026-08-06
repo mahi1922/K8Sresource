@@ -1,0 +1,35 @@
+apiVersion: v1
+kind: Daemonset
+metadata:
+  name: fluentd-elasticsearch
+  namespace: kube-system
+  labels: 
+    k8s-app: fluentd-logging
+spec:
+  selector:
+    matchLabels:
+      k8s-app: fluentd-logging
+  template:
+    metadata:
+      labels:
+        k8s-app: fluentd-logging
+    spec:
+      containers:
+       - name: fluentd-logging
+         iamge: quay.io/fluentd_elasticsearch/fluentd:v5.0.1
+         resources:
+          requests:
+            cpu: 100m
+            memory: 100Mi
+          limits:
+            cpu: 200m
+            memory: 200Mi
+         volumeMounts:
+          - name: fluentd
+            mountPath: /var/logg
+            readOnly: true
+      volumes:
+       - name: fluentd
+         hostPath:
+           path: /var/log 
+        
