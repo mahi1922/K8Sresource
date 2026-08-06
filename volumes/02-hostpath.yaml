@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
        - name: fluentd-logging
-         iamge: quay.io/fluentd_elasticsearch/fluentd:v5.0.1
+         image: quay.io/fluentd_elasticsearch/fluentd:v5.0.1
          resources:
           requests:
             cpu: 100m
