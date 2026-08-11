@@ -13,7 +13,7 @@ spec:
     driver: ebs.csi.aws.com
     volumeHandle: vol-0e1bee937536f01b1
 ---
-apiVersion: apps/v1
+apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
   name: ebs-static-pvc
@@ -27,7 +27,7 @@ spec:
   volumeName: ebs-static-pv  # Explicitly binds to your static PV
   storageClassName: "" 
 ---
-apiVersion: v1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: ebsnginx
