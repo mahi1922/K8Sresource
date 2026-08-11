@@ -43,13 +43,13 @@ spec:
     spec:
       containers:
         - name: nginx
-          image: nginx
+          image: nginx   # corrected image name
           volumeMounts:
-           - name: ebsstatic
-             mountPath:  /var/lib/nginx
+            - name: ebsstatic
+              mountPath: /var/lib/nginx
       volumes:
-      - name: ebsstatic
-        persistentVolumeClaim:
-         claimName: ebs-static-pvc
+        - name: ebsstatic
+          persistentVolumeClaim:
+            claimName: ebs-static-pvc
 
       
