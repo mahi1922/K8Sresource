@@ -44,7 +44,7 @@ spec:
       containers:
         - name: nginx
           image: nginx
-          volumes:
+          volumeMounts:
           - name: ebsstatic
             mountPath:  /var/lib/nginx
       volumes:
