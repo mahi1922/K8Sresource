@@ -45,8 +45,8 @@ spec:
         - name: nginx
           image: nginx
           volumeMounts:
-          - name: ebsstatic
-            mountPath:  /var/lib/nginx
+           - name: ebsstatic
+             mountPath:  /var/lib/nginx
       volumes:
       - name: ebsstatic
         persistentVolumeClaim:
