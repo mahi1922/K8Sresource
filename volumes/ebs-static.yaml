@@ -8,7 +8,7 @@ spec:
   accessModes:
     - ReadWriteOnce
   persistentVolumeReclaimPolicy: Retain
-  storageClassName: ebs-sc-static
+  storageClassName: ""
   csi:
     driver: ebs.csi.aws.com
     volumeHandle: vol-0e1bee937536f01b1
@@ -50,6 +50,6 @@ spec:
       volumes:
       - name: ebsstatic
         persistentVolumeClaim:
-         claimName: efs-static-pv
+         claimName: efs-static-pvc
 
       
