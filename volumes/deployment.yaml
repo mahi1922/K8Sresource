@@ -31,3 +31,20 @@ spec:
        - name: demovol
          emptyDir:
            sizeLimit: 100Mi
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: demonp
+  labels: 
+      project: roboshop
+      component: demo
+spec:
+  Type: NodePort
+  selector:
+      project: roboshop
+      component: demo
+  ports:
+    - protocol: TCP
+      port: 8080
+      targetPort: 8088
