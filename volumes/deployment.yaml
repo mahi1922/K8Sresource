@@ -40,7 +40,7 @@ metadata:
       project: roboshop
       component: demo
 spec:
-  Type: NodePort
+  type: NodePort
   selector:
       project: roboshop
       component: demo
