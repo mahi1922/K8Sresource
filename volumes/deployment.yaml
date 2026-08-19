@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: demo
+  labels:
+    project: roboshop
+    component: demo
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      project: roboshop
+      component: demo
+  template:
+    metadata:
+     labels:
+       project: roboshop
+       component: demo
+    spec:
+      containers:
+        - name: nginx
+          image: nginx
+          resources:
+            requests:
+              cpu: 100m
+              memory: 50Mi
+          volumeMounts:
+            - name: demovol
+              mountPath: /var/logs/nginx
+      volumes:
+       - name: demovol
+         emptyDir:
+           sizeLimit: 100Mi
